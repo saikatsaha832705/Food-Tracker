@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="tabs">
+                <button class="tab active" data-tab="booking">Booking Food</button>
+                <button class="tab" data-tab="tickets">My Tickets</button>
+                <button class="tab" data-tab="wallet">Wallet</button>
+                <button class="tab" id="logoutBtn">Log Out</button>
+            </div>
+            <div class="user-info">
+                <span id="displayName"></span>
+            </div>
+        </header>
+
+        <main>
+            <section id="booking" class="tab-content active">
+                <h2>Book Your Food</h2>
+                <form id="foodForm">
+                    <div class="form-group">
+                        <label for="occupation">Occupation</label>
+                        <select id="occupation" required>
+                            <option value="">Select Occupation</option>
+                            <option value="Students">Students</option>
+                            <option value="Teacher">Teacher</option>
+                            <option value="Cleaning Staff">Cleaning Staff</option>
+                            <option value="General Staff">General Staff</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" readonly>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="foodTime">Food Time</label>
+                        <select id="foodTime" required>
+                            <option value="">Select Food Time</option>
+                            <option value="Breakfast">Breakfast</option>
+                            <option value="Lunch">Lunch</option>
+                            <option value="Dinner">Dinner</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="foodType">Food Type</label>
+                        <select id="foodType" required>
+                            <option value="">Select Food Type</option>
+                            <option value="Veg">Veg</option>
+                            <option value="Non-Veg">Non-Veg</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    
+                    <button type="submit" class="btn" id="submitBtn" disabled>Submit</button>
+                </form>
+                
+                <div id="successMsg" class="success-msg">
+                    <div class="checkmark">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <p>Booking Successful!</p>
+                </div>
+            </section>
+
+            <section id="tickets" class="tab-content">
+                <h2>My Food Tickets</h2>
+                <div id="ticketsList" class="tickets-list"></div>
+            </section>
+
+            <section id="wallet" class="tab-content">
+                <h2>My Wallet</h2>
+                <div class="wallet-balance">
+                    <h3>Current Balance: <span id="walletBalance">0</span> INR</h3>
+                    <p id="paymentMessage"></p>
+                </div>
+                <div class="wallet-history">
+                    <h3>Transaction History</h3>
+                    <ul id="walletHistory"></ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

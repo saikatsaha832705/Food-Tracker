@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Tracker - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>Food Tracker</h1>
+            <div class="input-group">
+                <label for="loginId">Login ID</label>
+                <input type="text" id="loginId" placeholder="Enter your login ID">
+                <div id="nameDisplay" class="name-display"></div>
+                <div id="errorMsg" class="error-msg"></div>
+            </div>
+            <div class="time-info" id="timeInfo"></div>
+            <button id="loginBtn" class="btn" disabled>Login</button>
+        </div>
+    </div>
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

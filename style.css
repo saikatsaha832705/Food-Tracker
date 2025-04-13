@@ -1,0 +1,288 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('picture1.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:read-only {
+    background-color: #f0f0f0;
+}
+
+/* Login Page Styles */
+.login-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.login-box h1 {
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.name-display {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.valid {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.invalid {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+.error-msg {
+    color: #dc3545;
+    margin-top: 10px;
+    display: none;
+}
+
+.time-info {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #fff3cd;
+    color: #856404;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Home Page Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tab {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1;
+    text-align: center;
+}
+
+.tab.active {
+    border-bottom: 3px solid white;
+    font-weight: bold;
+}
+
+.user-info {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.success-msg {
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleCheckmark 0.5s ease-in-out;
+}
+
+.checkmark i {
+    color: white;
+    font-size: 40px;
+}
+
+@keyframes scaleCheckmark {
+    0% { transform: scale(0); }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.tickets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ticket {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.ticket-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.wallet-balance {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.wallet-balance h3 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.wallet-history {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-history ul {
+    list-style-type: none;
+}
+
+.wallet-history li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wallet-history li:last-child {
+    border-bottom: none;
+}
+
+.text-success {
+    color: #28a745;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+@media (max-width: 600px) {
+    .login-box {
+        margin: 20px auto;
+        padding: 20px;
+    }
+    
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .ticket-details {
+        grid-template-columns: 1fr;
+    }
+}
