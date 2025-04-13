@@ -12,7 +12,7 @@ function formatDate(date) {
 function isWithinLoginTime() {
     const now = getCurrentIST();
     const hours = now.getHours();
-    return hours >= 8 && hours < 22;
+    return hours >= 8 && hours < 12;
 }
 
 function processMonthEnd(wallet) {
@@ -134,7 +134,7 @@ if (document.getElementById('displayName')) {
     dateInput.value = formatDate(tomorrow);
 
     // Check booking time
-    if (today.getHours() >= 22) {
+    if (today.getHours() >= 12) {
         document.querySelectorAll('#foodForm input, #foodForm select').forEach(el => {
             el.disabled = true;
         });
